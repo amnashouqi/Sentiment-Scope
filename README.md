@@ -1,5 +1,5 @@
 <h1>Sentiment Scope</h1>
-<hr><p>With the power of AI to transform customer feedback into actionable insights, Our platform uses advanced sentiment analysis to decode emotions, measure satisfaction, and identify trends, helping businesses understand their customers on a deeper level. With seamless integration and intelligent processing, we turn raw feedback into valuable data, empowering organizations to improve services, drive engagement, and achieve impactful results.</p><h2>General Information</h2>
+<hr><p>With the power of AI to transform customer feedback into actionable insights, This platform uses advanced sentiment analysis to decode emotions, measure satisfaction, and identify trends, helping businesses understand their customers on a deeper level. <br>With seamless integration and intelligent processing, we turn raw feedback into valuable data, empowering organizations to improve services, drive engagement, and achieve impactful results.</p><h2>General Information</h2>
 <hr><ul>
 <li>The system is designed for seamless integration with various feedback channels, offering real-time analysis to improve customer experience and decision-making.</li>
 </ul><ul>
