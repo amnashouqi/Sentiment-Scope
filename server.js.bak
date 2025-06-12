@@ -20,8 +20,8 @@ app.post('/analyze-feedback', async (req, res) => {
     }
 
     try {
-        const openaiResponse = await axios.post(
-            'https://api.openai.com/v1/chat/completions',
+        const groqResponse = await axios.post(
+            'https://api.groq.com/openai/v1/chat/completions',
             {
                 model: 'gpt-3.5-turbo',  // Using GPT-3.5 for better understanding and response
                 messages: [
@@ -38,13 +38,13 @@ app.post('/analyze-feedback', async (req, res) => {
             },
             {
                 headers: {
-                    'Authorization': `Bearer OPENAI_API_KEY`,  // Replace with your OpenAI API key
+                    'Authorization': `Bearer GROQ_API_KEY`,  // Replace with your Groq API key
                 },
             }
         );
 
-        // Parse the response from OpenAI
-        const analysis = openaiResponse.data.choices[0].message.content.trim();
+        // Parse the response from Groq
+        const analysis = groqResponse.data.choices[0].message.content.trim();
         return res.json({ sentimentAnalysis: analysis });
     } catch (error) {
         console.error(error);
