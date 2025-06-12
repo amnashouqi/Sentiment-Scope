@@ -16,7 +16,33 @@
 </ul><ul>
 <li>NodeJS</li>
 </ul><ul>
-<li>OpenAI</li>
+<li>Groq</li>
 </ul><h2>Project Status</h2>
 <hr><p>In progress</p><h2>Contact</h2>
 <hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/amna-shouqi-a43886291/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a><span style="margin-right: 30px;"></span><a href="https://github.com/amnashouqi"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a></p>
+
+## Running Locally
+
+1. Copy `.env.example` to `.env`. The sample file includes a Groq API key for quick testing. Replace `GROQ_API_KEY` if you have your own.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the server:
+   ```bash
+   npm start
+   ```
+4. Open `http://localhost:3000` in your browser and submit feedback to see the sentiment analysis.
+
+
+## Deployment
+
+To publish your copy on GitHub:
+1. Create a new repository on GitHub.
+2. Add it as a remote and push the current branch:
+   ```bash
+   git remote add origin <your-repo-url>
+   git push -u origin work
+   ```
+You can then deploy the server on any Node.js hosting platform.
+

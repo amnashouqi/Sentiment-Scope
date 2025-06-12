@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
@@ -20,10 +21,10 @@ app.post('/analyze-feedback', async (req, res) => {
     }
 
     try {
-        const openaiResponse = await axios.post(
-            'https://api.openai.com/v1/chat/completions',
+        const groqResponse = await axios.post(
+            'https://api.groq.com/openai/v1/chat/completions',
             {
-                model: 'gpt-3.5-turbo',  // Using GPT-3.5 for better understanding and response
+                model: 'mixtral-8x7b-32768',  // Groq model
                 messages: [
                     {
                         role: 'system',
@@ -38,14 +39,14 @@ app.post('/analyze-feedback', async (req, res) => {
             },
             {
                 headers: {
-                    'Authorization': `Bearer OPENAI_API_KEY`,  // Replace with your OpenAI API key
-					'Content-Type': 'application/json'
+                    'Authorization': `Bearer ${process.env.GROQ_API_KEY}`,
+                    'Content-Type': 'application/json'
                 },
             }
         );
 
-        // Parse the response from OpenAI
-        const analysis = openaiResponse.data.choices[0].message.content.trim();
+        // Parse the response from Groq
+        const analysis = groqResponse.data.choices[0].message.content.trim();
         return res.json({ sentimentAnalysis: analysis });
     } catch (error) {
         console.error(error);
